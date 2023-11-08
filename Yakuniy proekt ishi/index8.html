@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main8.css">
+</head>
+<body>
+
+<div class="modal fade " id="startModal" data-target="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header kodsorash2">
+                <h4 class="mb-0 mt-2">Tizimga kirish</h4><br><br>
+                <img src="rasmlar/kirishrasm.svg" class="rasm" width="50" height="50" alt="">
+                <span class="Times" data-dismiss="modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 ">
+                        <div class="form-group">
+                            <label for="login" class="kodsorash1 ml-5 mt-1" >Loginni kiriting :</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="kodsorash1 ml-5 mt-2" >Parolni kiriting :</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="kodsorash1 ml-5 mt-2" >Xavsizlik kodi :</label>
+                        </div>
+                    </div>
+                    <div class="col-md-7 ">
+                        <div class="form-group">
+                            <input type="text" class="form-control kodsorash" id="login">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control kodsorash" id="password">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control kodsorash"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <button type="button" class="btn btn-danger w-50  ml-5 kirish" id="startBtn">Kirish</button>
+                        <p class="text-center mt-4 eslatma">
+                            KIRISH YO'QMI? PAROLNI UNUTDINGIZMI?<br>
+                            Agar o'z-o'ziga xizmat ko'rsatish tizimiga kirish imkoningiz bo'lmasa yoki parolingizni unutgan bo'lsangiz, parolingizni o'zingiz olish uchun Parolni olish xizmatidan foydalanishingiz mumkin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-none" id="workingBlock">
+    <div class="row my-5">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Menejer: <span id="kassir"></span></h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="payUser">To'lovchi</label>
+                                <input type="text" class="form-control" id="payUser">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="payUserId">To'lovchi hisob raqami</label>
+                                <input type="text" class="form-control" id="payUserId">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="payOrder">Chek raqami</label>
+                                <input type="text" class="form-control" id="payOrder">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="paySum">To'lov summasi</label>
+                                <input type="text" class="form-control" id="paySum">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="payTarget">To'lov maqsadi</label>
+                                <input type="text" class="form-control" id="payTarget">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="payType">To'lov turi</label>
+                                <select class="form-control" id="payType">
+                                    <option value="cash">Naqd</option>
+                                    <option value="cart">Plastik karta</option>
+                                    <option value="transit">Pul o'tkazish</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="payDate">Sana</label>
+                                <input type="date" class="form-control" id="payDate">
+                            </div>
+                        </div>
+                        <div class="col-md-4 pt-4">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success mt-2" id="addPay">Qo'shish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-bordered">
+                        <tr>
+                            <th>T/R</th>
+                            <th>F.I.Sh</th>
+                            <th>To'lov summasi</th>
+                            <th>Chek raqami</th>
+                            <th>To'lov maqsadi</th>
+                            <th>Sana</th>
+                            <th>Amallar</th>
+                        </tr>
+                        <tbody id="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td>Abdulloh</td>
+                            <td>20 000</td>
+                            <td>000250</td>
+                            <td>
+                                <span class="badge badge-success">Lavash</span>
+                            </td>
+                            <td>18.10.2023</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md-8 offset-2">
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="taskInput" placeholder="Vazifa nomi">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-success" onclick="addTask()">Qo'shish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Progress</h4>
+                        <ul class="list-unstyled">
+                            <li class="d-inline-block">Jami vazifalar: <span id="allTask">0</span></li>
+                            <li class="d-inline-block">Jami bajarilganlar: <span id="comlateTask">0</span></li>
+                        </ul>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-success active" id="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-3">
+                <div class="card-body">
+                    <ul class="list-group" id="list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container d-none" >
+    <div class="row my-5">
+        <div class="col-md-8 offset-2">
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="taskInput" placeholder="Vazifa nomi">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-success" onclick="addTask()">Qo'shish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Progress</h4>
+                        <ul class="list-unstyled">
+                            <li class="d-inline-block">Jami vazifalar: <span id="allTask">0</span></li>
+                            <li class="d-inline-block">Jami bajarilganlar: <span id="comlateTask">0</span></li>
+                        </ul>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-success active" id="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-3">
+                <div class="card-body">
+                    <ul class="list-group" id="list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/jQuery.min.js"></script>
+<script src="js/src/popover.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main8.js"></script>
+
+</body>
+</html>

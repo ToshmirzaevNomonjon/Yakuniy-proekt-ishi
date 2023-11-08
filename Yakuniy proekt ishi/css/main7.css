@@ -1,0 +1,93 @@
+body{
+    background-color: whitesmoke;
+}
+.Menu{
+    background-color: #ff384b;
+    height: 50px;
+    z-index: 1;
+}
+.menu{
+    font-weight: 500;
+    color: white;
+    width: 160px;
+    padding-top: 10px;
+    height: 50px;
+    border-radius: 0;
+}
+.menu:hover{
+    transition: 1s;
+    background-color: goldenrod;
+    color: white;
+    text-decoration: none;
+}
+.Malumot{
+    position: relative;
+    top: 20px;
+}
+.yuborish{
+    background: orange;
+    border-radius: 0;
+
+    color: white;
+    width: 25%;
+}
+.malumot-jadval{
+    height: 480px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+.iputt{
+    font-size: 17px;
+}
+.malumot-jadval:hover{
+    transition: 2.5s;
+}
+.malumot-foni{
+    height: 600px;
+   /* background:linear-gradient(-120deg,dodgerblue,lightskyblue);*/
+    background-color: #17a2b8;
+}
+.ozmzhaqimizda{
+    position: relative;
+    bottom: 20px;
+}
+.ishvaqti{
+    position: relative;
+    left: 50%;
+}
+.bizhaqimmizda{
+    /*background: linear-gradient(90deg,orange,coral,gold);*/
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.chexbock{
+    width: 25px;
+    position: relative;
+    right: 0.5%;
+}
+.yozuinput{
+    position: relative;
+    bottom: 2%;
+}
+.ishvaqtii{
+    position: relative;
+    left: 51.5%;
+}
+.btnn{
+    background-color: #ff384b;
+}
+.yozu:hover{
+    color: white;
+    font-weight: 700;
+    background-color: #ff384b;
+    box-shadow: 0 0 10px #ff384b;
+}
+.input{
+    width: 35%;
+}
+.qidiruv{
+    position: relative;
+    right: 25px;
+}

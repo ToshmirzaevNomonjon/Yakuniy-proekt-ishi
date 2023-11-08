@@ -1,0 +1,31 @@
+.kodsorash{
+    width: 250px;
+    position: relative;
+
+}
+.kirish{
+    position: relative;
+    left: 15%;
+}
+.kodsorash2{
+    background: linear-gradient(40deg, #a52a2a, #ec1111);
+    color: white;
+}
+.eslatma{
+    font-size: 18px;
+}
+.rasm{
+    color: white;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    position: relative;
+    left: 75px;
+}
+.Times{
+    font-weight: bolder;
+    font-size: 25px;
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+}

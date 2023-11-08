@@ -1,0 +1,49 @@
+body{
+    background-color: whitesmoke;
+}
+.Menu{
+    background-color: #ff384b;
+    height: 50px;
+    z-index: 1;
+}
+.menu{
+    font-weight: 500;
+    color: white;
+    width: 160px;
+    padding-top: 10px;
+    height: 50px;
+    border-radius: 0;
+}
+.menu:hover{
+    transition: 1s;
+    background-color: goldenrod;
+    color: white;
+    text-decoration: none;
+}
+.xot-doglar{
+    position: relative;
+    bottom: 180px;
+}
+.iconka{
+    position: relative;
+    bottom: 20%;
+}
+.xotrasm{
+    margin-top: 2px;
+}
+.btnn{
+    background-color: #ff384b;
+}
+.yozu:hover{
+    color: white;
+    font-weight: 700;
+    background-color: #ff384b;
+    box-shadow: 0 0 10px #ff384b;
+}
+.input{
+    width: 35%;
+}
+.qidiruv{
+    position: relative;
+    right: 25px;
+}
